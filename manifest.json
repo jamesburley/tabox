@@ -1,0 +1,34 @@
+{
+  "background": {
+    "persistent": false,
+    "scripts": [ "jquery-3.5.1.min.js", "background.js" ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon128.png",
+    "default_popup": "popup.html",
+    "default_title": "Save and share your tabs!"
+  },
+  "description": "Save your open tabs into groups and reopen them whenever you want in a single click!",
+  "icons": {
+    "128": "icons/icon128.png",
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png"
+  },
+  "manifest_version": 2,
+  "name": "Tabox - Save and Share Tab Groups",
+  "content_security_policy": "script-src 'self' https://apis.google.com/ https://oauth2.googleapis.com/; object-src 'self'",
+  "permissions": [
+   "tabs",
+   "storage",
+   "sessions",
+   "identity"
+  ],
+  "oauth2": {
+    "client_id": "701423091804-44m66s2jpctus9kcbqjacht483gkrjio.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.appdata",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  "version": "3.2"
+}
