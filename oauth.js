@@ -1,4 +1,4 @@
-const API_KEY = 'AIzaSyArRLI9U_X8KXOaX_THmPP4TxAQwSwW4eY';
+let API_KEY = '';
 const DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/drive/v3/rest"];
 var localTimestamp = 0;
 var serverTimestamp = 0;
@@ -283,6 +283,11 @@ function searchForSyncFile() {
 }
 
 window.onload = function() {
+  // Get Google Drive API key
+  const url = chrome.runtime.getURL('api-keys.json');
+  fetch(url)
+      .then((response) => response.json()) //assuming file contains json
+      .then((json) => API_KEY = json.googleDrive);
   setInterval(() => updateLastSyncMessage(), 20000);
   chrome.identity.getAuthToken({interactive: false}, function (token) {
     if (chrome.runtime.lastError) {

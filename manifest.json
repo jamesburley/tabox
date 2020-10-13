@@ -23,12 +23,15 @@
    "sessions",
    "identity"
   ],
+  "web_accessible_resources": [
+    "api-keys.json"
+  ],
   "oauth2": {
-    "client_id": "701423091804-44m66s2jpctus9kcbqjacht483gkrjio.apps.googleusercontent.com",
+    "client_id": "701423091804-dn276bcic0dboq4j9cug0p6b63topnuc.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/drive.appdata",
       "https://www.googleapis.com/auth/drive.file"
     ]
   },
-  "version": "3.2"
+  "version": "3.2.1"
 }
