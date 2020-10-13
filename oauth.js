@@ -303,7 +303,7 @@ window.onload = function() {
     }
   });
 
-  $('.gdrive_sync').click(function() {
+  $('.gdrive_sync').on('click', function() {
     let btnType = $('.gdrive_sync').data('type');
     if (btnType === "login") {
       chrome.runtime.sendMessage({login: true}, function(response) {
