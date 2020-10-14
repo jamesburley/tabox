@@ -2,14 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:16.04
+      - image: cibuilds/chrome-extension:latest
     environment:
-      - APP_ID: <INSERT-APP-ID>
+      - APP_ID: bdbliblipiempfdkkkjohnecmeknnpoa
     steps:
-      - type: shell
-        shell: /bin/sh
-        pwd: /
-        command: apk -U add git openssh
       - checkout
       - run:
           name: "Install Dependencies"
