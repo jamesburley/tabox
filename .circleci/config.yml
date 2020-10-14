@@ -6,6 +6,10 @@ jobs:
     environment:
       - APP_ID: <INSERT-APP-ID>
     steps:
+      - type: shell
+        shell: /bin/sh
+        pwd: /
+        command: apk -U add git openssh
       - checkout
       - run:
           name: "Install Dependencies"
