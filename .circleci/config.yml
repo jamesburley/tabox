@@ -2,10 +2,10 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:18.10
+      - image: circleci/python:3.6.2-stretch-browsers
         auth:
-              username: $DOCKERHUB_USER
-              password: $DOCKERHUB_PASSWORD
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
     environment:
       - APP_ID: bdbliblipiempfdkkkjohnecmeknnpoa
     steps:
