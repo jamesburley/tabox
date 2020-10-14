@@ -2,10 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.6.2-stretch-browsers
-        auth:
-          username: $DOCKERHUB_USER
-          password: $DOCKERHUB_PASSWORD
+      - image: buildpack-deps:trusty
     environment:
       - APP_ID: bdbliblipiempfdkkkjohnecmeknnpoa
     steps:
