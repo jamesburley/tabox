@@ -1,5 +1,8 @@
 # Tabox - Save and Share Tab Groups
 
+[![CircleCI](https://circleci.com/gh/gilgold/tabox/tree/main.svg?style=shield)](https://circleci.com/gh/gilgold/tabox/tree/main)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Tabox is a Chrome extension to save open tabs in tab groups that can be easily re-opened in a click. 
 
 You can also export and import tab groups, allowing you the option of sharing a group of tabs with others.
