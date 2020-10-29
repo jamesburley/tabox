@@ -220,17 +220,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Click event for the delete icon next to each setting
   $('#settings_body').on('click', '.del', ({currentTarget}) => {
-    indexToDelete = $(currentTarget).attr('index');
-    settings_data.splice(indexToDelete,1);
-    // send the new array without the setting we deleted to be saved into storage
-    updateStorage(settings_data);
-    $('#row' + indexToDelete).slideUp().fadeOut('normal',() => {
-      $('#row' + indexToDelete).remove();
-      rebuildTabGroups();
-      if (settings_data.length < 1) {
-        showEmptyMessage();
-      }
-    });
+    if (confirm('Delete \'' + $(currentTarget).attr('data-title') + '\' group?')) {
+      indexToDelete = $(currentTarget).attr('index');
+      settings_data.splice(indexToDelete,1);
+      // send the new array without the setting we deleted to be saved into storage
+      updateStorage(settings_data);
+      $('#row' + indexToDelete).slideUp().fadeOut('normal',() => {
+        $('#row' + indexToDelete).remove();
+        rebuildTabGroups();
+        if (settings_data.length < 1) {
+          showEmptyMessage();
+        }
+      });
+    }
   });
 
   // Export a tab group to text file
